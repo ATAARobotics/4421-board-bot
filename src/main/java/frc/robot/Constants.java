@@ -21,4 +21,5 @@ public static final double MAX_SAFE_SPEED_OVERRIDE = 0.2;
 public static double minRotationSpeed = 0.5;
 
 public static double maxRotationSpeed = 0.7;
+
 }
