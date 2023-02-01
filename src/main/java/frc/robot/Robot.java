@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+import java.nio.channels.Channel;
+
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -81,10 +83,23 @@ public class Robot extends TimedRobot {
     }
   }
 
-  /** This function is called periodically during operator control. */
+  /** This function is called periodically during operator control. */  
+
   @Override
   public void teleopPeriodic() {
-SmartDashboard.putBoolean("InductionSwitchState", inductionSwitchTest.get());
+    boolean inductionSwitchState = false;
+     if (inductionSwitchTest.get() == false) {
+       inductionSwitchState = true;
+
+     }
+     else{https://github.com/ATAARobotics/4421-board-bot.git
+      inductionSwitchState = false;
+
+     }
+     SmartDashboard.putBoolean("InductionSwitchState", inductionSwitchState);
+
+
+
   }
 
   @Override
